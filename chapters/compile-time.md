@@ -98,7 +98,7 @@ type alias MemberPolicy =
 
 Visually this looks like the following:
 
-![abc](https://preview.ibb.co/mWjMfx/Screen_Shot_2018_03_02_at_9_10_56_pm.png)
+<img src="/images/quotesmodel.png" width="320px" alt="Person and Membership with 15 views each importing Quotes module." />
 
 Great, we've got some code sharing here. Both Person and Membership now share the Quote component and we're happy! ( Of course, the avid reader would know that's not how the story goes.)
 
@@ -144,13 +144,13 @@ This is the reason for all non-compiler/OS related compile time blowouts and it 
 
 There is an excellent tool for looking at this specific scenario of coupling in your app, elm-module-graph[^1]. And for the case study, it produces the following graph:
 
-![elm module graph demonstrating coupling](https://preview.ibb.co/jNG3Sc/Screen_Shot_2018_03_02_at_9_30_51_pm.png)
+<img src="/images/coupled.png" width="320px" alt="elm module graph demonstrating coupling of Quotes model" />
 
 So Quotes is the highlighted module. It has 11 blue modules lit up, these are the modules that either import it directly or indirectly. There are 3 black lines that comes out of quotes, these are the modules that import Quotes directly. The rest of them come out of Model.Person because Model.Person imports Quotes.
 
 This is how it looked after I _removed Quotes from the Person/Membership_ models and passed it into functions that required it.
 
-![Refactored version of quotes](https://image.ibb.co/djq2Lx/Screen_Shot_2018_03_02_at_9_36_22_pm.png)
+<img src="/images/decoupled.png" width="320px" alt="Refactored version of quotes, no more coupling." />
 
 So now Quotes is directly imported by Membership and Person, two TEA modules and this is imported by Main.
 

@@ -1,5 +1,3 @@
-WIP: Draft 22/3/2018
-
 # Introduction
 
 
