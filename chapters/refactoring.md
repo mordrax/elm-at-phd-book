@@ -180,4 +180,5 @@ A popular excuse ( the one used for the above code ) is, it works for _me_, _I_ 
 #### Footnotes
 
 [^1]: Mocha, Chai, Enzyme component testing -  https://mordrax.github.io/cotwmtor/2016/04/09/DaySix.html
+
 [^2]: https://www.youtube.com/watch?v=IcgmSRJHu_8

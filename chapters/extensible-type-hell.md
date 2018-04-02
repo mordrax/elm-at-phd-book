@@ -131,5 +131,7 @@ In time, others smarter than I will be able to explain to me why this behaviour 
 #### Footnotes
 
 [^1]: Full broken version: https://ellie-app.com/f726SMFcpa1/0
+
 [^2]: By Luke Westby, a full featured elm compiler in your browser - https://ellie-app.com
+
 [^3]: Full working example : https://ellie-app.com/m9f8zgZZSa1/1

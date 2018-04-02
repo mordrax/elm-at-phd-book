@@ -39,5 +39,7 @@ He's also a mad keen Haskeller. Check out his wonderful Haskell book: http://www
 #### Footnotes
 
 [^1]: Castle of the Winds remake in Elm - https://github.com/mordrax/cotwelm
+
 [^2]: Elm Remote Meetup talk - https://youtu.be/ulrukPRYsws?t=50m4s
+
 [^3]: Elm Remote Meetup slides - https://docs.google.com/presentation/d/10vN7eLr3qsd4nK2zcxUHgbu68fO_yzAA-b7Hf7kEcik/edit?usp=sharing

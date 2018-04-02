@@ -169,9 +169,15 @@ So with this pattern, even if your app reaches 426 files, your compile time will
 #### Footnotes
 
 [^1]: elm-module-graph: https://github.com/justinmimbs/elm-module-graph
+
 [^2]: Rich Hicky's Simple Made Easy: https://www.infoq.com/presentations/Simple-Made-Easy
+
 [^3]: Compile time issues and workarounds: https://gist.github.com/zwilias/7ed394ec0e9c6035e1874d19b721e294
+
 [^4]: Elm Remote Meetup talk - https://youtu.be/ulrukPRYsws?t=50m4s
+
 [^5]: Elm Remote Meetup slides - https://docs.google.com/presentation/d/10vN7eLr3qsd4nK2zcxUHgbu68fO_yzAA-b7Hf7kEcik/edit?usp=sharing
+
 [^6]: elm-hack.sh, a script to compile single modules VERY fast - https://github.com/mordrax/cotwelm/blob/master/hack.sh
+
 [^7]: What we do when Elm is compiling - https://xkcd.com/303/
