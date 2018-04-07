@@ -2,7 +2,7 @@
 
 _Coupling, in the form of importing modules, is the key to causing large jumps in compiled files and eventually a blowout in compile time. Anyone who's experienced their workflow grind to a halt knows what this feels like. elm-module-graph[^1] is an excellent tool in diagnosing where your dependencies come from. Making modules Simple[^2] is the key to having a constant compile time as your application grows._
 
-There are two kinds of issues when trying to improve compile time. Compiler/OS optimisation issues[^3] and your application architecture. The former issues are well known and likely to be addressed in the 0.19 release. The latter is the focus of this section as it will affect most codebases beyond ~10k lines. If your application is less than this, or your compile time is under 10 seconds, focus on features and do not waste time fiddling with compile time. Read something useful like [Refactoring](/chapters/refactoring.md) to reduce time spent on bugs.
+There are two kinds of issues when trying to improve compile time. Compiler/OS optimisation issues and your application architecture. The former has well documented workarounds[^3] and are likely to be addressed in the 0.19 release. The latter is the focus of this section as it will affect most codebases beyond roughly 10k lines. If your application is less than this, or your compile time is under 10 seconds, focus on features and do not waste time fiddling with compile time optimizations. Read something useful like [Refactoring](/chapters/refactoring.md) to reduce time spent on bugs.
 
 #### Do you have a coupling problem?
 Here's the test:
@@ -19,9 +19,9 @@ Number of Files | Health of your app
 30+ | There is some serious coupling here. The xkcd on compiling[^7] is no longer funny because you're about to lose your job from lack of productivity.
 100+ | Do I even need to welcome you to your own personal hell? Read on. (Seriously though, if this is your average, and this section didn't help you, I'm happy to help you personally. Hit me up on elm-slack, #compile-time, @mordrax)
 
-So, the above was a bit of fun (need some fun after mashing out 4000 words). The serious point though is that a healthy app should really only be compiling 3-5 files _for most changes regardless of the size of the app_. This means when you hit 1000 files and 100k LoC, you're still only compiling 3-5 files. Of course this does not hold for your common files or library files because by definition, they will be imported by alot of modules but more on strategies to mitigate that in [File Structure](/chapters/file-structure.md).
+So that was a bit of a lighthearted take on what can turn into a very frustrating problem down the line. The point is that a _healthy app should really only be compiling 3-5 files for most changes regardless of the size of the app_. This means when you hit 1000 files and 100k LoC, you're still only compiling 3-5 files. Of course this does not hold for your common files or library files because by definition, they will be imported by alot of modules but more on strategies to mitigate that in [File Structure](/chapters/file-structure.md).
 
-To give you an idea, our application of 450+ files with 45k LoC typically recompiles 3-6 modules with page changes. Components cause a jump to about 100+ taking over 3 minutes to complete. Touching Alfred.elm or our Types.elm definition recompiles over 200 files and we take a short coffee break. Unavoidable.
+To give you an idea, our application of 450+ files with 45k LoC typically recompiles 3-6 modules with page changes. Components cause a jump to about 100+ taking over 3 minutes to complete. Touching Alfred.elm or our Types.elm definition recompiles over 200 files and we take a short coffee break. Sadly unavoidable.
 
 #### Our story...
 

@@ -173,8 +173,10 @@ type alias Grid =
 
 So these sorts of refactoring are more time consuming because they will force you to handle all the possible states. On the positive side, you'll _never_ have to consider the invalid cases, not in tests, not in debugging, they are impossible.
 
-A popular excuse ( the one used for the above code ) is, it works for _me_, _I_ never make these mistakes, why bother spending the effort. Removing impossible state means no-one else will ever make these mistakes either. This is why we have the confidence to let our newer devs go crazy on the codebase because _our state and types are locked down._ And once your code hits a level where one brain is no longer enough to store it, then this strategy becomes crucial in reducing regressions.
-(Aside: Flattening an architecture is not something that I consider to be a core refactor. The reason being that it happens as a _consequence_ of decoupling your msg, model, making things opaque and removing impossible state. Blindly flattening everything to the same level under Main.elm does not result in a decouple architecture so those issues are still there and lead to responsibility breakdowns in overexposing types, sky rocketing compile times etc... but more on this in the [Compile Time](/chapters/compile-time.md).
+Removing impossible state means that _no-one else working on your code after you can introduce bugs in their ignorance_. We confidently let our newer devs go crazy on the codebase because our state and types are locked down.
+
+
+(Aside: Flattening an architecture is not something that I consider to be a core refactor. It happens as a _consequence_ of decoupling your msg, model, making things opaque and removing impossible state. Blindly flattening everything to the same level under Main.elm does not result in a decouple architecture so those issues are still there and lead to responsibility breakdowns in overexposing types, sky rocketing compile times etc... more details in [Compile Time](/chapters/compile-time.md).
 
 
 #### Footnotes

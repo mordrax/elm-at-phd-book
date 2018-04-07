@@ -42,7 +42,7 @@ Due to how our data types are in the backend, there are `Maybe` variants of thes
 
 #### Stateless components
 
-A stateless component does not hold state. If you think that statement was obvious, then we have successfully named them. They look like this:
+A stateless component does not hold state. If that was obvious, then we have named them well. They look like this:
 
 ```haskell
 type alias Address a =
@@ -58,7 +58,7 @@ view : Lookup -> Bool -> Address a -> Html Msg
 validate : Address a -> List String
 ```
 
-Couple of things to note here. To make it possible to interact with the rest of the world with no state, the component defines an extensible record and interacts with that. The component is like a service, it contains _domain logic_ to handle edits for these fields. It knows how to display them, update the fields and we also include all validations in the component.
+To make it possible to interact with the rest of the world with no state, the component defines an extensible record and interacts with that. The component is like a service, it contains _domain logic_ to handle edits for these fields. It knows how to display them, update the fields and we also include all validations in the component.
 
 This way our various pages or even other components could pick this up and say, hey! please handle _my_ address state for me. And do the validation for it.
 
