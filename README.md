@@ -33,7 +33,7 @@ Finally, I [rant and rave](/chapters/final-words.md) about how much I love Elm a
 
 # Thanks
 
-To Julian Livingstone who was my mentor in Elm and gave his time freely to review and critique this article.  
+To Julian Leviston who was my mentor in Elm and gave his time freely to review and critique this article.  
 He's also a mad keen Haskeller. Check out his wonderful Haskell book: [http://www.happylearnhaskelltutorial.com/](http://www.happylearnhaskelltutorial.com/)
 
 #### Footnotes
