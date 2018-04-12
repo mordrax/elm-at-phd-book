@@ -8,8 +8,10 @@ Reading time: 65 minutes. + Code snippets
 
 Published: 8th April 2018
 
+ 10 months later, we hover at 45k LoC and have completed about a third of the features of the legacy app.
+
 I write Elm at Pacific Health Dynamics, a small health insurance software vendor with big dreams. Since July 2017, I’ve been leading the frontend rewrite of their flagship product.  
-The codebase was at 16k LoC when I started. Since then, I’ve rewritten the various subsystems at least once \(I'm looking at you _generic form component_\). Now we hover around 45k LoC with most of the common SPA structures stabilizing. We are about a third of the way to completion. This is a typical massive, legacy, regulated system.
+The rewrite of the legacy application was already at 16k LoC when I joined 10 months ago. Since then, I’ve rewritten the various subsystems at least once \(I'm looking at you _generic form component_\) and introduced core structures necessary for SPAs. The codebase is now at 45k LoC (a third of the way to completion). This is a typical massive, legacy, regulated system.
 
 The driving motivation for this article is to share my experiences, discuss the various challenges we faced and provide practical solutions that we took to overcome them. I feel that there is not enough long form analysis from teams using Elm and that is something I'd craved when deciding whether to take on Elm in a professional setting rather than just as a hobby.[^1] Therefore, this article is aimed at those similar to where I was, not sure whether to take the step or for teams who are using Elm and struggle with the various topics I cover here. To that effect, the code samples here are not for beginners of the language and my focus is not in explaining basic concepts.
 
