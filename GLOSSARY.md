@@ -21,6 +21,9 @@ A record containing all static domain data such as enums, insurance products, us
 ## FUN!
 A reference to Dwarf Fortress where 'losing is fun'. Much in a similar vein, extensible records can get very confusing very quickly.
 
+## SPAs
+Single Page Applications
+
 # Code listing
 
 ## Alfred.Logic
