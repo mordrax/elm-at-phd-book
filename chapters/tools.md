@@ -1,10 +1,10 @@
 # Tools
 
-_Over time, we have accumulated a bunch of tools such as our pipeable logic functions to make conditionals flow better, our Oracle module imports nothing but is able to work on all our domain models. And I briefly show what a form wizard and grid (table) can look like._
+_Over time, we have accumulated a bunch of tools such as our pipeable logic functions to make conditionals flow better, our Oracle module imports nothing but is able to work on all our domain models. And I briefly show what a form wizard and grid \(table\) can look like._
 
 ## Alfred
 
-Alfred is a great helper. One of he's best assets is his `Alfred.Logic` ability.
+Alfred is a great helper. One of his best assets is his `Alfred.Logic` ability.
 
 ```haskell
 -- performs conditional validation
@@ -21,12 +21,11 @@ case msg of
             |> PersonDetail.update field
 ```
 
-In our quest to turn everything we do into pipes ( things just read alot nicer when the whole function is one declarative data transformation ), we created Alfred.Logic. Full [code listing](/GLOSSARY.md/#code-listing) in the glossary.
-
+In our quest to turn everything we do into pipes \( things just read alot nicer when the whole function is one declarative data transformation \), we created Alfred.Logic. Full [code listing](/GLOSSARY.md/#code-listing) in the glossary.
 
 ## Oracle
 
-We have a model helper (named Oracle.elm) that works off common fields and types. Since the backend is mostly constructed via interfaces, our endpoints contains many overlapping fields. Oracle helps to consolidate getter logic in one place:
+We have a model helper \(named Oracle.elm\) that works off common fields and types. Since the backend is mostly constructed via interfaces, our endpoints contains many overlapping fields. Oracle helps to consolidate getter logic in one place:
 
 ```haskell
 -- Oracle.elm
@@ -47,16 +46,15 @@ Oracle is great, it allows us to fetch complex relationships in our data models 
 
 Practically though, we don't actually use this as much as the creator would have wished because the more complex getters typically come with domain logic which looks into our Model folder for logic.
 
-
 ## Component Wizardry
 
 I just wanted to show off our 'wizard' component which is great for making specific step-by-step forms that shares one model. Note that the wizard does not hold any parent state but rather, just a list of steps with functions that allows it to go back and forth. It boasts:
 
-- automatically checks validation on each step
-- conditionally skip steps
-- guaranteed to never get into a invalid step state ( but this is just Elm and ZipList )
+* automatically checks validation on each step
+* conditionally skip steps
+* guaranteed to never get into a invalid step state \( but this is just Elm and ZipList \)
 
-Here's the API (Full [code listing](/GLOSSARY.md/#code-listing) is also available. May make a package eventually.):
+Here's the API \(Full [code listing](/GLOSSARY.md/#code-listing) is also available. May make a package eventually.\):
 
 ```haskell
 type alias Wizard oz msg =
@@ -104,4 +102,5 @@ case Wizard.validate state wizard of
 Wizard.view state wizard
 ```
 
-So our wizard component holds a bunch of functions. It doesn't hold the steps, this is passed in. Next happens once a step is validated. Steps are conditional, they can contain initial jobs (Cmds + extras). Having a component like this is a massive time saver for multi-stepped forms which we seem to have more of now that there's a wizard.
+So our wizard component holds a bunch of functions. It doesn't hold the steps, this is passed in. Next happens once a step is validated. Steps are conditional, they can contain initial jobs \(Cmds + extras\). Having a component like this is a massive time saver for multi-stepped forms which we seem to have more of now that there's a wizard.
+
