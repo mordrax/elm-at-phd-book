@@ -93,9 +93,9 @@ type alias Person =
 
 -- lead to these hacks
 
-pid = Maybe.withDefault personId 0
-personId = Maybe.withDefault uiModel.number 0
-id = Maybe.withDefault myId 0
+pid = Maybe.withDefault 0 personId
+personId = Maybe.withDefault 0 uiModel.number
+id = Maybe.withDefault 0 myId
 ```
 
 So what's happening is that the backend is returning a `Maybe Int` for a person id. Then the frontend handles it by using 0 as a default whenever it encounters Nothing _reasoning that it'll never happen_.
